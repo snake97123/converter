@@ -4,6 +4,11 @@ document.querySelector('#convertButton').addEventListener('click', () => {
   document.querySelector('#jsonOutput').value = JSON.stringify(json, null, 2);
 });
 
+document.querySelector('#clearButton').addEventListener('click', () => {
+  document.querySelector('#csvInput').value = '';
+  document.querySelector('#jsonOutput').value = '';
+});
+
 function csvToJson(csv) {
   const lines = csv.split('\n');
   const result = [];
