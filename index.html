@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <link rel="stylesheet" href="./styles.css"> 
+  <title>Csv To Json</title>
 </head>
 <body>
-  
+<h1 class="title">Csv To Json</h1>
+<p>これはCsvをJsonへ変換するツールです。入力欄にCsv形式で入力し、<br>変換ボタンをクリックすることでJson形式へ変換することができます。</p>
+<div class="section">
+  <div class="container">
+    <textarea id="csvInput" placeholder="CSVをこちらに入力してください。"></textarea>
+  </div>
+  <div class="container">
+    <textarea id="jsonOutput" placeholder="変換結果がこちらに表示されます。"></textarea>
+  </div>
+</div>
+<div class="buttonContainer">
+<button id="convertButton">変換</button>
+<button id="clearButton">クリア</button>
+</div>
+<script src="./script.js"></script>  
 </body>
 </html>

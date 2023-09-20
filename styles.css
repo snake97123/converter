@@ -1,0 +1,46 @@
+.title {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.section {
+  display: flex;
+}
+.container {
+  width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#convertButton {
+  width: 100px;
+  height: 30px;
+  margin-right: 10px;
+  color: #fff;
+  background-color: black;
+}
+
+#clearButton {
+  width: 100px;
+  height: 30px;
+  color: black;
+}
+ 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
