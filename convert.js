@@ -5,8 +5,10 @@ document.querySelector('#convertButton').addEventListener('click', () => {
   if(isJson(input)) {
     const jsonObj = JSON.parse(input);
     output = jsonToCsv(jsonObj);
+  } else if(isCsv(input)) {
+    output = JSON.stringify(csvToJson(input), null, 2);
   } else {
-    output = csvToJson(input);
+    output = '正しい入力値を入力してください。'
   }
 
   document.querySelector('#jsonOrCsvOutput').value = output;
@@ -24,6 +26,20 @@ function isJson(str) {
       return false;
     }
     return true;
+}
+
+function isCsv(str) {
+  const lines = str.trim().split('\n');
+  if(lines.length < 2) return false;
+
+  const headerFields = lines[0].split(',');
+  const numFields = headerFields.length;
+
+  for(let i = 1; i < lines.length; i++) {
+    const fields = lines[i].split(',');
+    if(fields.length !== numFields) return false;
+  }
+  return true;
 }
 
 function csvToJson(csv) {
