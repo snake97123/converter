@@ -47,11 +47,15 @@ function csvToJson(csv) {
   const result = [];
   const headers = lines[0].split(',');
 
-  for(let i = 1; i < lines.length - 1; i++) {
+  for(let i = 1; i < lines.length; i++) {
     const obj = {};
     const currentLine = lines[i].split(",");
     for(let j = 0; j < headers.length; j++) {
-      obj[headers[j]] = currentLine[j];
+      let value = currentLine[j].trim();
+      if(value.startsWith('"') && value.endsWith('"')) {
+        value = value.substring(1, value.length - 1);
+      }
+      obj[headers[j]] = value;
     }
     result.push(obj);
   }
