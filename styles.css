@@ -16,6 +16,7 @@ p {
   padding: 0;
   border: 1px solid #ddd;
   border-radius: 5px;
+  position: relative;
 }
 
 textarea {
@@ -42,5 +43,20 @@ textarea {
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+#downloadButton {
+  width: 100px;
+  height: 30px;
+  color: black;
+}
+
+.downloadButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+  bottom: -40px;
+  left: 0;
+  right: 0;
 }
